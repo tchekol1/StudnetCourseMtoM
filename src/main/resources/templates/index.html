@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:li="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div th:each="student:${students}">
+    <p th:="text">Student name [[${student.name}]]</p>
+    <p th:="text">Gpa [[${student.gpa}]]</p>
+    <p th:="text">Department[[${student.department}]]</p>
+
+<!--        <th:block th:block th:each="course:${student.courses}">-->
+<!--    <li th:inline="text">[[${course.title}]] [[${course.credits}]] [[${course.instructor}]]</li>-->
+<!--        </th:block>-->
+
+<!--</ul>-->
+
+
+</div>
+</body>
+</html>
